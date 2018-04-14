@@ -38,6 +38,8 @@ namespace Administrating.Controllers
         [HttpPost]
         public ActionResult AddOrEdit(ProductModel product)
         {
+            product.ImagePath = Request["ImagePath"];
+
             if (product.Id == 0)
             {
                 HttpResponseMessage response = ApiConnector.client.PostAsJsonAsync("Products", product).Result;

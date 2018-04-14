@@ -15,5 +15,13 @@ namespace Administrating.Models
         public string Description { get; set; }
         public string ImagePath { get; set; }
         public string Category { get; set; }
+
+        [NotMapped]
+        public HttpPostedFileBase ImageUpload { get; set; }
+
+        public ProductModel()
+        {
+            ImagePath = "~/App_Files/Images/default-image.png";
+        }
     }
 }

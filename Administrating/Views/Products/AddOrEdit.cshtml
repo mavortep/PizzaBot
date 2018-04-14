@@ -47,13 +47,13 @@
         </div>
     </div>
 
-    @*<div class="form-group">
+    <div class="form-group">
         @Html.LabelFor(model => model.ImagePath, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             <img src="@Url.Content(Model.ImagePath)" style="margin:10px" height="200" width="200" id="imagePreview" />
-            <input type="file" name="ImageUpload" accept="image/jpeg, image/png" onchange="ShowImagePreview(this, document.getElementById(imagePreview))"/>
+            <input type="text" name="ImageUpload" accept="image/jpeg, image/png" onchange="ShowImagePreview(this, document.getElementById('imagePreview'))"/>
         </div>
-    </div>*@
+    </div>
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">

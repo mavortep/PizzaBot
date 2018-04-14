@@ -23,6 +23,7 @@ namespace PizzaBot.Dialogs
             foreach (Product product in products)
             {
                 List<CardAction> cardButtons = new List<CardAction>();
+                //List<CardImage> cardImages = new List<CardImage>();
                 CardAction plButton = new CardAction()
                 {
                     Value = $"Product {product.Id}",
@@ -34,7 +35,8 @@ namespace PizzaBot.Dialogs
                 {
                     Title = $"{product.Name} {product.Category}\n\n {product.Price}$\n\n",
                     Text = $"{product.Description}",
-                    Buttons = cardButtons
+                    Buttons = cardButtons,
+                    Images = new List<CardImage> { new CardImage(product.ImagePath)}
                 };
                 Attachment plAttachment = plCard.ToAttachment();
                 message.Attachments.Add(plAttachment);
