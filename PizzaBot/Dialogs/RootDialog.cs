@@ -43,7 +43,7 @@ namespace PizzaBot.Dialogs
 
         private void ShowOptions(IDialogContext context)
         {
-            PromptDialog.Choice(context, this.OnOptionSelected, new List<string>() { MenuOption, OrderOption/*, TrackingOption, DiscountOption, RecommendationOption*/ }, "Please choose the option from the following: ", "Not a valid option", 6);
+            PromptDialog.Choice(context, this.OnOptionSelected, new List<string>() { MenuOption, OrderOption, DiscountOption/*, TrackingOption, DiscountOption, RecommendationOption*/ }, "Please choose the option from the following: ", "Not a valid option", 6);
         }
 
         private async Task OnOptionSelected(IDialogContext context, IAwaitable<string> result)
@@ -61,13 +61,13 @@ namespace PizzaBot.Dialogs
                     context.Call(new OrderDialog(), this.ResumeAfterOptionDialog);
                     break;
 
-                    //case TrackingOption:
-                    //    context.Call(new TrackingDialog(), this.ResumeAfterOptionDialog);
-                    //    break;
+                //case TrackingOption:
+                //    context.Call(new TrackingDialog(), this.ResumeAfterOptionDialog);
+                //    break;
 
-                    //case DiscountOption:
-                    //    context.Call(new DiscountDialog(), this.ResumeAfterOptionDialog);
-                    //    break;
+                case DiscountOption:
+                    context.Call(new DiscountDialog(), this.ResumeAfterOptionDialog);
+                    break;
 
                     //case RecommendationOption:
                     //    context.Call(new RecommendationDialog(), this.ResumeAfterOptionDialog);

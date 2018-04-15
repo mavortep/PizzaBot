@@ -125,6 +125,7 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
+    <Compile Include="Dialogs\DiscountDialog.cs" />
     <Compile Include="Dialogs\OrderDialog.cs" />
     <Compile Include="Dialogs\MenuDialog.cs" />
     <Compile Include="Dialogs\RootDialog.cs" />
