@@ -28,5 +28,6 @@ namespace Api.Infrastructure
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Size> Sizes { get; set; }
+        public virtual DbSet<History> Histories { get; set; }
     }
 }

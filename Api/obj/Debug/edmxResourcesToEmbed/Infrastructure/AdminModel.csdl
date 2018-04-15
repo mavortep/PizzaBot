@@ -29,5 +29,17 @@
     <EntitySet Name="Categories" EntityType="Self.Category" />
     <EntitySet Name="Products" EntityType="Self.Product" />
     <EntitySet Name="Sizes" EntityType="Self.Size" />
+    <EntitySet Name="Histories" EntityType="ApiProductsModel.History" />
   </EntityContainer>
+  <EntityType Name="History">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Channel" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

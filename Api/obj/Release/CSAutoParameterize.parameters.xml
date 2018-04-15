@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="ApiProductsEntities-Web.config Connection String" description="ApiProductsEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Infrastructure.AdminModel.csdl|res://*/Infrastructure.AdminModel.ssdl|res://*/Infrastructure.AdminModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(localdb)\MSSQLLocalDB;initial catalog=ApiProducts;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\mapet\\source\\repos\\PizzaBotService\\Api\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ApiProductsEntities']/@connectionString" />
+  </parameter>
+</parameters>

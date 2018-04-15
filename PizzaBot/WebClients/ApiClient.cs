@@ -31,5 +31,24 @@ namespace PizzaBot.WebClients
             }
             return JsonConvert.DeserializeObject<IEnumerable<Product>>(contents);
         }
+
+        public static async Task<IEnumerable<Size>> GetSizeAsync(string path)
+        {
+            string contents = null;
+            HttpResponseMessage response = await client.GetAsync(path);
+            if (response.IsSuccessStatusCode)
+            {
+                contents = await response.Content.ReadAsStringAsync();
+            }
+            return JsonConvert.DeserializeObject<IEnumerable<Size>>(contents);
+        }
+
+        public static async Task<Uri> PostHistoryAsync(History history)
+        {
+            HttpResponseMessage response = await client.PostAsJsonAsync("api/Histories", history);
+            response.EnsureSuccessStatusCode();
+
+            return response.Headers.Location;
+        }
     }
 }

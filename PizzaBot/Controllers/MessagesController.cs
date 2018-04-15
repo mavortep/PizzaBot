@@ -1,9 +1,13 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
+using PizzaBot.Loggers;
+using PizzaBot.Models;
+using PizzaBot.WebClients;
 
 namespace PizzaBot
 {
@@ -18,6 +22,16 @@ namespace PizzaBot
         {
             if (activity.Type == ActivityTypes.Message)
             {
+                History history = new History()
+                { Channel = activity.ChannelId,
+                  UserID = activity.From.Id,
+                  UserName = activity.From.Name,
+                  Created = DateTime.UtcNow,
+                  Message = activity.Text.Truncate(500)
+                };
+                var url = await ApiClient.PostHistoryAsync(history);
+
+
                 await Conversation.SendAsync(activity, () => new Dialogs.RootDialog());
             }
             else

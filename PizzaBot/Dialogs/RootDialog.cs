@@ -43,7 +43,7 @@ namespace PizzaBot.Dialogs
 
         private void ShowOptions(IDialogContext context)
         {
-            PromptDialog.Choice(context, this.OnOptionSelected, new List<string>() { MenuOption, OrderOption, TrackingOption, DiscountOption, RecommendationOption }, "Please choose the option from the following: ", "Not a valid option", 6);
+            PromptDialog.Choice(context, this.OnOptionSelected, new List<string>() { MenuOption, OrderOption/*, TrackingOption, DiscountOption, RecommendationOption*/ }, "Please choose the option from the following: ", "Not a valid option", 6);
         }
 
         private async Task OnOptionSelected(IDialogContext context, IAwaitable<string> result)
