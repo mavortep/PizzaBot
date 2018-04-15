@@ -12,7 +12,7 @@ namespace PizzaBot.Dialogs
     {
         private const string MenuOption = "Menu";
 
-        private const string ProductOption = "Order";
+        private const string OrderOption = "Order";
 
         private const string TrackingOption = "Tracking";
 
@@ -31,9 +31,9 @@ namespace PizzaBot.Dialogs
         {
             var message = await result;
 
-            if (message.Text.ToLower().Contains("help") || message.Text.ToLower().Contains("support"))
+            if (message.Text.ToLower().Contains("help") || message.Text.ToLower().Contains("support") || message.Text.ToLower().Contains("problem"))
             {
-                await context.Forward(new OrderDialog(), this.ResumeAfterProductDialog, message, CancellationToken.None);
+                await context.Forward(new SupportDialog(), this.ResumeAfterSupportDialog, message, CancellationToken.None);
             }
             else
             {
@@ -43,7 +43,7 @@ namespace PizzaBot.Dialogs
 
         private void ShowOptions(IDialogContext context)
         {
-            PromptDialog.Choice(context, this.OnOptionSelected, new List<string>() { MenuOption, ProductOption, TrackingOption, DiscountOption, RecommendationOption }, "Please choose the option from the following: ", "Not a valid option", 6);
+            PromptDialog.Choice(context, this.OnOptionSelected, new List<string>() { MenuOption, OrderOption, TrackingOption, DiscountOption, RecommendationOption }, "Please choose the option from the following: ", "Not a valid option", 6);
         }
 
         private async Task OnOptionSelected(IDialogContext context, IAwaitable<string> result)
@@ -52,12 +52,13 @@ namespace PizzaBot.Dialogs
 
             switch (optionSelected)
             {
-                //case MenuOption:
-                //    context.Call(new MenuDialog(), this.ResumeAfterOptionDialog);
-                //    break;
 
                 case MenuOption:
-                    context.Call(new ProductDialog(), this.ResumeAfterOptionDialog);
+                    context.Call(new MenuDialog(), this.ResumeAfterOptionDialog);
+                    break;
+
+                case OrderOption:
+                    context.Call(new OrderDialog(), this.ResumeAfterOptionDialog);
                     break;
 
                     //case TrackingOption:
@@ -74,9 +75,11 @@ namespace PizzaBot.Dialogs
             }
         }
 
-        private async Task ResumeAfterProductDialog(IDialogContext context, IAwaitable<object> result)
+        private async Task ResumeAfterSupportDialog(IDialogContext context, IAwaitable<int> result)
         {
-            await context.PostAsync("resume after product dialog");
+            var ticketNumber = await result;
+
+            await context.PostAsync($"Thanks for contacting our support team. Your ticket number is {ticketNumber}.");
             context.Wait(this.MessageReceivedAsync);
         }
 

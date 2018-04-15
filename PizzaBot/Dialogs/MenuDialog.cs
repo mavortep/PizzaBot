@@ -12,7 +12,7 @@ using System.Web;
 namespace PizzaBot.Dialogs
 {
     [Serializable]
-    public class ProductDialog : IDialog<object>
+    public class MenuDialog : IDialog<object>
     {
         public async Task StartAsync(IDialogContext context)
         {
@@ -23,14 +23,6 @@ namespace PizzaBot.Dialogs
             foreach (Product product in products)
             {
                 List<CardAction> cardButtons = new List<CardAction>();
-                //List<CardImage> cardImages = new List<CardImage>();
-                CardAction plButton = new CardAction()
-                {
-                    Value = $"Product {product.Id}",
-                    Type = ActionTypes.ImBack,
-                    Title = "Choose"
-                };
-                cardButtons.Add(plButton);
                 HeroCard plCard = new HeroCard()
                 {
                     Title = $"{product.Name} {product.Category}\n\n {product.Price}$\n\n",
