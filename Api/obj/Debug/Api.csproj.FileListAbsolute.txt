@@ -94,6 +94,7 @@ C:\Users\mapet\source\repos\PizzaBotService\Api\bin\Microsoft.AI.DependencyColle
 C:\Users\mapet\source\repos\PizzaBotService\Api\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\mapet\source\repos\PizzaBotService\Api\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\mapet\source\repos\PizzaBotService\Api\bin\Microsoft.AI.Web.xml
+C:\Users\mapet\source\repos\PizzaBotService\Api\obj\Debug\Api.csprojResolveAssemblyReference.cache
 C:\Users\mapet\source\repos\PizzaBotService\Api\obj\Debug\Api.csproj.CoreCompileInputs.cache
 C:\Users\mapet\source\repos\PizzaBotService\Api\obj\Debug\Api.csproj.CopyComplete
 C:\Users\mapet\source\repos\PizzaBotService\Api\obj\Debug\Api.dll

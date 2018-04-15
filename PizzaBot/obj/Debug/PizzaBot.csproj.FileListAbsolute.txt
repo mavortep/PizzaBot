@@ -1,5 +1,3 @@
-C:\Users\mapet\source\repos\PizzaBotService\PizzaBot\obj\Debug\PizzaBot.csprojResolveAssemblyReference.cache
-C:\Users\mapet\source\repos\PizzaBotService\PizzaBot\obj\Debug\PizzaBot.csproj.CoreCompileInputs.cache
 C:\Users\mapet\source\repos\PizzaBotService\PizzaBot\bin\Bot Application.dll.config
 C:\Users\mapet\source\repos\PizzaBotService\PizzaBot\bin\Bot Application.dll
 C:\Users\mapet\source\repos\PizzaBotService\PizzaBot\bin\Bot Application.pdb
@@ -50,6 +48,8 @@ C:\Users\mapet\source\repos\PizzaBotService\PizzaBot\bin\nl\Microsoft.Bot.Builde
 C:\Users\mapet\source\repos\PizzaBotService\PizzaBot\bin\pt-BR\Microsoft.Bot.Builder.resources.dll
 C:\Users\mapet\source\repos\PizzaBotService\PizzaBot\bin\ru\Microsoft.Bot.Builder.resources.dll
 C:\Users\mapet\source\repos\PizzaBotService\PizzaBot\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
+C:\Users\mapet\source\repos\PizzaBotService\PizzaBot\obj\Debug\PizzaBot.csprojResolveAssemblyReference.cache
+C:\Users\mapet\source\repos\PizzaBotService\PizzaBot\obj\Debug\PizzaBot.csproj.CoreCompileInputs.cache
 C:\Users\mapet\source\repos\PizzaBotService\PizzaBot\obj\Debug\PizzaBot.csproj.CopyComplete
 C:\Users\mapet\source\repos\PizzaBotService\PizzaBot\obj\Debug\Bot Application.dll
 C:\Users\mapet\source\repos\PizzaBotService\PizzaBot\obj\Debug\Bot Application.pdb

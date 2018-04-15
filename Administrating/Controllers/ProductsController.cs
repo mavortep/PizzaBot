@@ -38,7 +38,7 @@ namespace Administrating.Controllers
         [HttpPost]
         public ActionResult AddOrEdit(ProductModel product)
         {
-            product.ImagePath = Request["ImagePath"];
+            //product.ImagePath = Request["ImagePath"];
 
             if (product.Id == 0)
             {
